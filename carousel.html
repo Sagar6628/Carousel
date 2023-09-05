@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: greenyellow;
+            position: relative;
+            display: grid;
+            overflow: hidden;
+        }
+       .js{
+            justify-self: center;
+            position: absolute;
+            /* border: solid; */
+            top: 350px;
+            z-index: 6;
+        }
+        .imgs{
+            position: absolute;
+            width: 600px;
+            height: 400px; 
+
+        }
+    </style>
+    <script>
+       function dots(one){
+        document.getElementById("image_one").style.zIndex="0"
+        document.getElementById("image_two").style.zIndex="0"
+        document.getElementById("image_three").style.zIndex="0"
+        document.getElementById("image_four").style.zIndex="0"
+        function image(two){
+            const dot1 = document.getElementById("dot_one").value
+            const dot2 = document.getElementById("dot_two").value
+            const dot3 = document.getElementById("dot_three").value
+            const dot4 = document.getElementById("dot_four").value
+            const image1 = document.getElementById("image_one")
+            const image2 = document.getElementById("image_two")
+            const image3 = document.getElementById("image_three")
+            const image4 = document.getElementById("image_four")
+            switch (two) {
+                case (1): document.getElementById("image_one").style.zIndex="5"
+                break;
+                case(2):document.getElementById("image_two").style.zIndex="5"
+                break;
+                case(3):document.getElementById("image_three").style.zIndex="5"
+                break;
+                case(4):document.getElementById("image_four").style.zIndex="5"
+            }
+        }
+        image(one)
+       }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="imgs" id="image_one">
+            <img class="imgs" src="Chill Beats Records Art Vol_2.png" alt="">
+        </div>
+        <div class="imgs" id="image_two">
+            <img class="imgs" src="Climb Aboard 'Howl's Moving Castle'.jpg" alt="">
+        </div>
+        <div class="imgs" id="image_three">
+            <img class="imgs" src="Enhance Your Desktop Experience with a Stunning, One-of-a-Kind AI-Generated Wallpaper.png" alt="">
+        </div>
+        <div class="imgs" id="image_four">
+            <img class="imgs" src="Too cute to describe.jpg" alt="">
+        </div>
+        <div class="js">
+            <table>
+                <tr>
+                    <td><center><input type="radio" name="abc" id="dot_one" onclick="dots(1)"></center></td>
+                    <td><center><input type="radio" name="abc" id="dot_two" onclick="dots(2)"></center></td>
+                    <td><center><input type="radio" name="abc" id="dot_three" onclick="dots(3)"></center></td>
+                    <td><center><input type="radio" name="abc" id="dot_four" onclick="dots(4)"></center></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
